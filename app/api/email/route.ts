@@ -1,4 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { Resend } from 'resend'
+
+const resend = new Resend(process.env.RESEND_API_KEY || '')
 
 export async function POST(request: NextRequest) {
   try {
@@ -21,17 +24,30 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // In production, you would:
-    // 1. Send email with the download link using Resend/SendGrid
-    // 2. Store the email in your database for follow-up
+    // Send email with Resend
+    const dataHtml = `
+      <h2>Your Cleaned Revenue Data</h2>
+      <p>Thank you for using Truewind Revenue Cleaner!</p>
+      <h3>Summary:</h3>
+      <ul>
+        <li>Total Donations: ${summary?.totalDonations || 0}</li>
+        <li>Restricted Donations: ${summary?.restrictedCount || 0}</li>
+        <li>Refunds: ${summary?.refundCount || 0}</li>
+        <li>Total Amount: $${(summary?.totalAmount || 0).toFixed(2)}</li>
+        <li>Effective Donations: ${summary?.effectiveDonations || 0}</li>
+      </ul>
+      <p>You can download your cleaned revenue schedule from the web interface.</p>
+      <p><strong>Truewind</strong> - The essential tool for nonprofit finance professionals.</p>
+    `
 
-    // For now, we'll just log it and return success
-    console.log(`Email would be sent to: ${email}`)
-    console.log(`Data rows: ${data?.length || 0}`)
-    console.log(`Summary:`, summary)
+    const result = await resend.emails.send({
+      from: 'Truewind Revenue Cleaner <onboarding@resend.dev>',
+      to: email,
+      subject: 'Your Cleaned Revenue Data from Truewind',
+      html: dataHtml
+    })
 
-    // Simulate email sending delay
-    await new Promise(resolve => setTimeout(resolve, 500))
+    console.log('Email sent:', result)
 
     return NextResponse.json({
       success: true,
