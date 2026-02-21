@@ -1,10 +1,26 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
 
-const resend = new Resend(process.env.RESEND_API_KEY || '')
+const resendApiKey = process.env.RESEND_API_KEY
+
+// Check if API key is configured
+if (!resendApiKey) {
+  console.error('RESEND_API_KEY is not configured')
+}
+
+const resend = new Resend(resendApiKey || '')
 
 export async function POST(request: NextRequest) {
   try {
+    // Check API key first
+    if (!resendApiKey) {
+      console.error('Email sending failed: RESEND_API_KEY not configured')
+      return NextResponse.json(
+        { error: 'Email service not configured. Please contact support.' },
+        { status: 500 }
+      )
+    }
+
     const body = await request.json()
     const { email, data, summary } = body
 
@@ -23,6 +39,8 @@ export async function POST(request: NextRequest) {
         { status: 400 }
       )
     }
+
+    console.log('Sending email to:', email)
 
     // Send email with Resend
     const dataHtml = `
@@ -94,7 +112,16 @@ export async function POST(request: NextRequest) {
       html: dataHtml
     })
 
-    console.log('Email sent:', result)
+    console.log('Email sent result:', JSON.stringify(result))
+
+    // Check if there was an error
+    if (result.error) {
+      console.error('Resend error:', result.error)
+      return NextResponse.json(
+        { error: `Failed to send email: ${result.error.message}` },
+        { status: 500 }
+      )
+    }
 
     return NextResponse.json({
       success: true,
@@ -102,8 +129,9 @@ export async function POST(request: NextRequest) {
     })
   } catch (error) {
     console.error('Email error:', error)
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error'
     return NextResponse.json(
-      { error: 'Failed to send email' },
+      { error: `Failed to send email: ${errorMessage}` },
       { status: 500 }
     )
   }
