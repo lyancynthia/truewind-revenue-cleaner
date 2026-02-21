@@ -284,7 +284,7 @@ export default function Home() {
       <header className="border-b border-slate-200 bg-white/80 backdrop-blur-sm sticky top-0 z-50">
         <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <img src="/logo.png" alt="Truewind" className="h-10 w-auto" />
+            <img src="/logo.png" alt="Truewind" className="h-20 w-auto" />
           </div>
         </div>
       </header>
@@ -401,7 +401,7 @@ export default function Home() {
                 className="bg-white rounded-2xl shadow-lg border border-slate-200 p-12 text-center"
               >
                 <div className="w-20 h-20 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <Loader2 className="w-10 h-10 text-green-600 animate-spin" />
+                  <Loader2 className="w-10 h-20 text-green-600 animate-spin" />
                 </div>
                 <h3 className="text-xl font-semibold text-slate-900 mb-2">
                   AI is processing your data...
