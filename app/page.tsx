@@ -295,7 +295,7 @@ export default function Home() {
       <section className="py-16 md:py-24 px-4">
         <div className="max-w-4xl mx-auto text-center animate-stagger">
           <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-            Your Donation Data, <span className="gradient-text">Audit-Ready in 30 Seconds</span>
+            Your Donation Data, <span className="gradient-text">Audit-Ready in 10 Seconds</span>
           </h1>
           <p className="text-lg md:text-xl text-slate-600 mb-12 max-w-2xl mx-auto">
             Upload messy export files from Stripe, PayPal, Bank, or CRM, and download clean revenue schedules ready for auditors and board meetings
