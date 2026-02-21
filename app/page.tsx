@@ -366,14 +366,37 @@ export default function Home() {
                     <p className="text-xs text-slate-500">
                       🔒 Your data will be deleted immediately after processing
                     </p>
-                    <a
-                      href="/samples/sample_stripe_paypal_export.csv"
-                      download
-                      className="text-sm text-green-600 hover:text-green-700 flex items-center gap-1"
-                    >
-                      <DownloadIcon className="w-4 h-4" />
-                      Download Sample File
-                    </a>
+                  </div>
+
+                  {/* Sample Datasets */}
+                  <div className="mt-6 pt-6 border-t border-slate-100">
+                    <p className="text-xs text-slate-500 mb-3">Or try a sample dataset:</p>
+                    <div className="flex flex-wrap gap-2">
+                      <a
+                        href="/samples/sample_stripe_paypal_export.csv"
+                        download
+                        className="text-xs px-3 py-1.5 bg-blue-50 text-blue-600 hover:bg-blue-100 rounded-full flex items-center gap-1.5 transition-colors"
+                      >
+                        <DownloadIcon className="w-3 h-3" />
+                        Stripe + PayPal
+                      </a>
+                      <a
+                        href="/samples/sample_donations_mixed_platforms.csv"
+                        download
+                        className="text-xs px-3 py-1.5 bg-green-50 text-green-600 hover:bg-green-100 rounded-full flex items-center gap-1.5 transition-colors"
+                      >
+                        <DownloadIcon className="w-3 h-3" />
+                        Mixed Platforms
+                      </a>
+                      <a
+                        href="/samples/sample_donations_complex.csv"
+                        download
+                        className="text-xs px-3 py-1.5 bg-purple-50 text-purple-600 hover:bg-purple-100 rounded-full flex items-center gap-1.5 transition-colors"
+                      >
+                        <DownloadIcon className="w-3 h-3" />
+                        Complex
+                      </a>
+                    </div>
                   </div>
                 </div>
 
