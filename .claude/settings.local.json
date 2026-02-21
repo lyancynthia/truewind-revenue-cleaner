@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install)",
+      "Bash(npm run build)",
+      "Bash(pkill:*)",
+      "Bash(npm run dev)",
+      "Bash(curl:*)",
+      "Bash(export HTTP_PROXY=http://127.0.0.1:7890:*)",
+      "Bash(export HTTPS_PROXY=http://127.0.0.1:7890:*)",
+      "Bash(export:*)",
+      "Bash(export https_proxy=http://127.0.0.1:7890:*)",
+      "Bash(python3 -c:*)",
+      "Bash(lsof:*)",
+      "Bash(xargs:*)",
+      "Bash(HTTP_PROXY=http://127.0.0.1:7890 HTTPS_PROXY=http://127.0.0.1:7890 npm run dev:*)",
+      "Bash(npm install http-proxy-agent)",
+      "Bash(npm install:*)",
+      "Bash(node:*)",
+      "Bash(npm run dev:proxy)"
+    ]
+  }
+}
