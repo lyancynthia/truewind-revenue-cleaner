@@ -52,7 +52,7 @@ export async function POST(request: NextRequest) {
 </head>
 <body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #1e293b; max-width: 600px; margin: 0 auto; padding: 20px;">
   <div style="text-align: center; margin-bottom: 30px;">
-    <div style="display: inline-block; width: 48px; height: 48px; background: linear-gradient(135deg, #FBBF24 0%, #F59E0B 100%); border-radius: 12px; line-height: 48px; font-size: 24px; font-weight: bold; color: white;">T</div>
+    <img src="https://truewind-revenue-cleaner.vercel.app/logo.png" alt="Truewind" style="width: 48px; height: 48px; border-radius: 12px;" />
     <h1 style="margin: 10px 0 0; font-size: 24px; color: #0f172a;">Truewind Revenue Cleaner</h1>
   </div>
 
