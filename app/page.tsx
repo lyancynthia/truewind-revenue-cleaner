@@ -284,8 +284,11 @@ export default function Home() {
       <header className="border-b border-slate-200 bg-white/80 backdrop-blur-sm sticky top-0 z-50">
         <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #FFD700 0%, #FFA500 100%)', borderRadius: '6px' }}>
-              <span className="text-white font-bold text-sm" style={{ fontFamily: 'Georgia, serif', textShadow: '0 1px 1px rgba(0,0,0,0.15)' }}>T</span>
+            <div className="w-8 h-8 flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #FBBF24 0%, #F59E0B 100%)', borderRadius: '8px' }}>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 6h3.5c1.5 0 2.5 1.1 2.5 2.5s-1 2.5-2.5 2.5H9v5.5c0 .6-.4 1-1 1s-1-.4-1-1V7c0-.6.4-1 1-1z" fill="white"/>
+                <path d="M14.5 6H18c.6 0 1 .4 1 1v12c0 .6-.4 1-1 1h-3.5" stroke="white" strokeWidth="1.5" strokeLinecap="round"/>
+              </svg>
             </div>
             <span className="text-lg font-bold text-slate-800" style={{ letterSpacing: '-0.5px' }}>truewind</span>
           </div>
@@ -713,8 +716,11 @@ export default function Home() {
       <footer className="border-t border-slate-200 bg-white py-8 px-4">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
-            <div className="w-6 h-6 flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #FFD700 0%, #FFA500 100%)', borderRadius: '6px' }}>
-              <span className="text-white font-bold text-sm" style={{ fontFamily: 'Georgia, serif' }}>T</span>
+            <div className="w-6 h-6 flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #FBBF24 0%, #F59E0B 100%)', borderRadius: '6px' }}>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 6h3.5c1.5 0 2.5 1.1 2.5 2.5s-1 2.5-2.5 2.5H9v5.5c0 .6-.4 1-1 1s-1-.4-1-1V7c0-.6.4-1 1-1z" fill="white"/>
+                <path d="M14.5 6H18c.6 0 1 .4 1 1v12c0 .6-.4 1-1 1h-3.5" stroke="white" strokeWidth="1.5" strokeLinecap="round"/>
+              </svg>
             </div>
             <span className="text-sm text-slate-600">truewind © 2026</span>
           </div>
