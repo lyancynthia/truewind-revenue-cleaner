@@ -284,8 +284,7 @@ export default function Home() {
       <header className="border-b border-slate-200 bg-white/80 backdrop-blur-sm sticky top-0 z-50">
         <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <img src="/logo.png" alt="Truewind" className="w-8 h-8" style={{ borderRadius: '6px' }} />
-            <span className="text-lg font-bold text-slate-800" style={{ letterSpacing: '-0.5px' }}>truewind</span>
+            <img src="/logo.png" alt="Truewind" className="h-8 w-auto" />
           </div>
         </div>
       </header>
@@ -711,8 +710,7 @@ export default function Home() {
       <footer className="border-t border-slate-200 bg-white py-8 px-4">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
-            <img src="/logo.png" alt="Truewind" className="w-6 h-6" style={{ borderRadius: '4px' }} />
-            <span className="text-sm text-slate-600">truewind © 2026</span>
+            <img src="/logo.png" alt="Truewind" className="h-6 w-auto" />
           </div>
           <div className="flex items-center gap-6 text-sm text-slate-500">
             <a href="#" className="hover:text-slate-700">Privacy Policy</a>
