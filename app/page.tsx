@@ -712,7 +712,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
             <img src="/logo.png" alt="Truewind" className="w-6 h-6" style={{ borderRadius: '4px' }} />
-            <span className="text-sm text-slate-600">truewind © 2026</span>
+            <span className="text-sm font-bold text-slate-800" style={{ letterSpacing: '-0.5px' }}>truewind © 2026</span>
           </div>
           <div className="flex items-center gap-6 text-sm text-slate-500">
             <a href="#" className="hover:text-slate-700">Privacy Policy</a>
