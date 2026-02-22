@@ -299,7 +299,7 @@ export default function Home() {
             Upload messy export files from Stripe, PayPal, Bank, or CRM, and download clean revenue schedules ready for auditors and <span className="whitespace-nowrap">board meetings</span>
           </p>
 
-          <div className="grid md:grid-cols-3 gap-6 mb-12">
+          <div className="grid md:grid-cols-3 gap-4 mb-6">
             {[
               { icon: Upload, title: 'Upload', desc: 'Drag & drop your CSV or Excel file', color: 'bg-blue-100 text-blue-600' },
               { icon: Sparkles, title: 'AI Clean', desc: 'Auto-identify donors, amounts, restrictions, fees', color: 'bg-green-100 text-green-600' },
